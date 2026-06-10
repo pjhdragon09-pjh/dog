@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>스마트 랜덤 강아지 생성기</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="card">
+      <h1>🐶 랜덤 강아지 생성기</h1>
+      
+      <div class="counter-box">
+        지금까지 본 강아지: <span id="dogCount">0</span>마리
+      </div>
+
+      <div class="image-box">
+        <img id="dogImage" alt="강아지 사진">
+        <button id="likeBtn" class="like-btn" title="좋아요">🤍</button>
+      </div>
+
+      <p id="loading">강아지 사진을 불러오는 중...</p>
+
+      <div id="infoBox" class="info-box">
+        <div class="info-title">🔍 품종: <span id="breedName">정보를 가져오는 중...</span></div>
+        <div class="info-desc">💡 특징: <span id="breedTrait">특징을 분석하고 있습니다.</span></div>
+      </div>
+
+      <div class="slideshow-control">
+        <span>⏱️ 전환 주기:</span>
+        <input type="number" id="intervalInput" value="3" min="1" max="60">
+        <span>초마다 넘기기</span>
+      </div>
+
+      <div class="btn-group">
+        <div class="row-btns">
+          <button id="newDogBtn" class="primary">새로운 강아지 보기</button>
+          <button id="slideshowBtn" class="play-btn">▶️ 슬라이드쇼 시작</button>
+        </div>
+        <button id="barkBtn" class="sound-btn">🔊 강아지 소리 켜기 (멍멍!)</button>
+        <button id="downloadBtn" class="secondary">💾 현재 사진 파일로 저장하기</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="favorites-section">
+    <h2>
+      <span>❤️ 내가 좋아요 한 강아지</span>
+      <button id="clearBtn" class="clear-btn">전체 삭제</button>
+    </h2>
+    <div id="gallery" class="gallery"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
